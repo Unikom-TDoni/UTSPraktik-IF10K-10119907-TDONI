@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".core.RegisterFormViewBindingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@fraction/normal_guideline_start_point" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@fraction/normal_guideline_end_point" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_back" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_100"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/form_pengisian_data"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_normal_125"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_background"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_heading" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_jenis_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_150"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/jenis_test"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_mini_120"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/card_background" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_jenis_test_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/harus_diisi"
+            android:textColor="@color/primary_green"
+            android:textSize="@dimen/txt_mini_100"
+            app:layout_constraintBottom_toBottomOf="@id/txt_view_jenis_test"
+            app:layout_constraintStart_toEndOf="@id/txt_view_jenis_test"
+            app:layout_constraintTop_toTopOf="@id/txt_view_jenis_test" />
+
+        <RadioGroup
+            android:id="@+id/radio_jenis_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:buttonTint="@color/primary_green"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_jenis_test">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primary_green"
+                android:checked="true"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="@dimen/space_normal_100"
+                android:paddingEnd="0dp"
+                android:text="@string/rapid_antigen"
+                android:textSize="@dimen/txt_mini_140" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="@dimen/space_normal_100"
+                android:paddingEnd="0dp"
+                android:text="@string/pcr"
+                android:textSize="@dimen/txt_mini_140" />
+        </RadioGroup>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_tanggal_terkonfirmasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_150"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/tanggal_terkonfirmasi"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_mini_120"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/radio_jenis_test" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_tanggal_terkonfirmasi_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/harus_diisi"
+            android:textColor="@color/primary_green"
+            android:textSize="@dimen/txt_mini_100"
+            app:layout_constraintBottom_toBottomOf="@id/txt_view_tanggal_terkonfirmasi"
+            app:layout_constraintStart_toEndOf="@id/txt_view_tanggal_terkonfirmasi"
+            app:layout_constraintTop_toTopOf="@id/txt_view_tanggal_terkonfirmasi" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_field_tanggal_terkonfirmasi"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:background="@color/natural_grey_50"
+            android:drawableEnd="@drawable/ic_calendar"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="@string/pilih_tanggal"
+            android:inputType="date"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_tanggal_terkonfirmasi" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_nik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_150"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/nik"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_mini_120"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_tanggal_terkonfirmasi" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_field_nik"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:background="@color/natural_grey_50"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="@string/masukan_nik"
+            android:inputType="number"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_nik" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_150"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/nama"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_mini_120"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_nik" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_nama_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/harus_diisi"
+            android:textColor="@color/primary_green"
+            android:textSize="@dimen/txt_mini_100"
+            app:layout_constraintBottom_toBottomOf="@id/txt_view_nama"
+            app:layout_constraintStart_toEndOf="@id/txt_view_nama"
+            app:layout_constraintTop_toTopOf="@id/txt_view_nama" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_field_nama"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:background="@color/natural_grey_50"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="@string/masukan_nama"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_nama" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_tanggal_lahir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_150"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/tanggal_terkonfirmasi"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_mini_120"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_nama" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_tanggal_lahir_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/harus_diisi"
+            android:textColor="@color/primary_green"
+            android:textSize="@dimen/txt_mini_100"
+            app:layout_constraintBottom_toBottomOf="@id/txt_view_tanggal_lahir"
+            app:layout_constraintStart_toEndOf="@id/txt_view_tanggal_lahir"
+            app:layout_constraintTop_toTopOf="@id/txt_view_tanggal_lahir" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_field_tanggal_lahir"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_120"
+            android:background="@color/natural_grey_50"
+            android:drawableEnd="@drawable/ic_calendar"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="@string/pilih_tanggal"
+            android:inputType="date"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_tanggal_lahir" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_jenis_kelamin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_150"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/jenis_kelamin"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_mini_120"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_tanggal_lahir" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_jenis_kelamin_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/harus_diisi"
+            android:textColor="@color/primary_green"
+            android:textSize="@dimen/txt_mini_100"
+            app:layout_constraintBottom_toBottomOf="@id/txt_view_jenis_kelamin"
+            app:layout_constraintStart_toEndOf="@id/txt_view_jenis_kelamin"
+            app:layout_constraintTop_toTopOf="@id/txt_view_jenis_kelamin" />
+
+        <RadioGroup
+            android:id="@+id/radio_jenis_kelamin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_125"
+            android:buttonTint="@color/primary_green"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_jenis_kelamin">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_mini_80"
+                android:buttonTint="@color/primary_green"
+                android:checked="true"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="@dimen/space_normal_100"
+                android:paddingEnd="0dp"
+                android:text="@string/laki_laki"
+                android:textSize="@dimen/txt_mini_140" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="@dimen/space_normal_100"
+                android:paddingEnd="0dp"
+                android:text="@string/perempuan"
+                android:textSize="@dimen/txt_mini_140" />
+        </RadioGroup>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_hubungan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_150"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/jenis_kelamin"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_mini_120"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/radio_jenis_kelamin" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_hubungan_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/harus_diisi"
+            android:textColor="@color/primary_green"
+            android:textSize="@dimen/txt_mini_100"
+            app:layout_constraintBottom_toBottomOf="@id/txt_view_hubungan"
+            app:layout_constraintStart_toEndOf="@id/txt_view_hubungan"
+            app:layout_constraintTop_toTopOf="@id/txt_view_hubungan" />
+
+        <RadioGroup
+            android:id="@+id/radio_hubungan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_125"
+            android:buttonTint="@color/primary_green"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_hubungan">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_mini_80"
+                android:buttonTint="@color/primary_green"
+                android:checked="true"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="@dimen/space_normal_100"
+                android:paddingEnd="0dp"
+                android:text="@string/orangtua"
+                android:textSize="@dimen/txt_mini_140" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="@dimen/space_normal_100"
+                android:paddingEnd="0dp"
+                android:text="@string/suami_istri"
+                android:textSize="@dimen/txt_mini_140" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="@dimen/space_normal_100"
+                android:paddingEnd="0dp"
+                android:text="@string/anak"
+                android:textSize="@dimen/txt_mini_140" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingStart="@dimen/space_normal_100"
+                android:paddingEnd="0dp"
+                android:text="@string/kerabat_lainnya"
+                android:textSize="@dimen/txt_mini_140" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/check_box_privacy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_large_120"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/dengan_ini_saya_menyetujui_bahwa_data_yang_saya_isikan_adalah_benar"
+            android:paddingStart="@dimen/space_normal_100"
+            android:textColor="@color/natural_grey_600"
+            android:textSize="@dimen/txt_mini_100"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/radio_hubungan" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_large_100"
+            android:layout_marginBottom="@dimen/space_large_100"
+            android:text="@string/selanjutnya"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@color/primary_green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/check_box_privacy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

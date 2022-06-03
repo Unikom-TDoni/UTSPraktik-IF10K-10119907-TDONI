@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".core.CheckFormViewBindingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@fraction/normal_guideline_start_point" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@fraction/normal_guideline_end_point" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_back" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_100"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/cek_kembali_isian_data"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_normal_125"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_jenis_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_150"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/jenis_test"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_mini_120"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_heading" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_field_jenis_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:enabled="false"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_jenis_test" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_tanggal_terkonfirmasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_100"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/jenis_test"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_mini_120"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_jenis_test" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_field_tanggal_terkonfirmasi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:enabled="false"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_tanggal_terkonfirmasi" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_nik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_100"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/nik"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_mini_120"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_tanggal_terkonfirmasi" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_field_nik"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:enabled="false"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_nik" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_100"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/nama"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_mini_120"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_nik" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_field_nama"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:enabled="false"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_nama" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_tanggal_lahir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_100"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/tanggal_lahir"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_mini_120"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_nama" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_field_tanggal_lahir"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:enabled="false"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_tanggal_lahir" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_jenis_kelamin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_100"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/jenis_kelamin"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_mini_120"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_tanggal_lahir" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_field_jenis_kelamin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:enabled="false"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_jenis_kelamin" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_hubungan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_100"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/hubungan_dengan_anda"
+            android:textColor="@color/natural_grey_800"
+            android:textSize="@dimen/txt_mini_120"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_jenis_kelamin" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_field_hubungan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:enabled="false"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_view_hubungan" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_check"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="67dp"
+            android:backgroundTint="@color/primary_green"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/check_hasil_test"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_field_hubungan" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_ubah"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_100"
+            android:layout_marginBottom="@dimen/space_normal_150"
+            android:text="@string/ubah"
+            android:textAllCaps="false"
+            android:textColor="@color/natural_grey_600"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/btn_check"
+            app:strokeColor="@color/natural_grey_600"
+            app:strokeWidth="1dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

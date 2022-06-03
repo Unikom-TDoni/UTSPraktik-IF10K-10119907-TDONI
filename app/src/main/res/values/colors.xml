@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="natural_grey_50">#FAFAFA</color>
+    <color name="natural_grey_200">#EEEEEE</color>
+    <color name="natural_grey_600">#757575</color>
+    <color name="natural_grey_800">#424242</color>
+    <color name="primary_green">#16A75C</color>
+</resources>
